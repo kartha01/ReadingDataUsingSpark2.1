@@ -8,7 +8,7 @@ object ReadDataFromTextFile extends App {
     .getOrCreate()
 
 
-  val df = spark.read.text("hdfs://localhost:54311/BabuStore/textFile.txt")
+  val df = spark.read.text("./src/main/resources/textFile.txt")
   //To display dataframe data
   df.show()
 }

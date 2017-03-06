@@ -8,7 +8,7 @@ object ReadDataFromParquet extends App {
     .getOrCreate()
 
 
-  val df = spark.read.parquet("hdfs://localhost:54311/user/hduser/testJson.parquet")
+  val df = spark.read.parquet("./src/main/resources/testJson.parquet")
   //To display dataframe data
   df.show()
 }

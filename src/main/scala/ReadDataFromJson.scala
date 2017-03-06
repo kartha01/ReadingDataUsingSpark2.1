@@ -10,7 +10,7 @@ object ReadDataFromJson extends App {
     .getOrCreate()
 
 
-  val df = spark.read.json("hdfs://localhost:54311/BabuStore/testJson.json")
+  val df = spark.read.json("./src/main/resources/testJson.json")
   //To display dataframe data
   df.show()
 

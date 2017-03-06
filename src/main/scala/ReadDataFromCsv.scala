@@ -8,7 +8,7 @@ object ReadDataFromCsv extends App {
     .appName("ReadDataFromCsv")
     .getOrCreate()
 
-  val df = spark.read.csv("hdfs://localhost:54311/BabuStore/testData.csv")
+  val df = spark.read.csv("./src/main/resources/testData.csv")
 
  // To display dataframe data
  df.show()
