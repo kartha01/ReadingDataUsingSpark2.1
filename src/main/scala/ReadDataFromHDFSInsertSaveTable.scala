@@ -13,7 +13,7 @@ df1.show()
 df1.write.mode("overwrite").saveAsTable("default.A1")
 
 //continue using the old temp table a1
-df1.registerTempTable("a2")
+spark.sql("select * from a1").show()
 
 //No support for UPDATE
 //scala> val df2=spark.sql("Update a2 set _c1='tx' where _c0=3")
